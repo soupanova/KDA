@@ -1,10 +1,16 @@
 const path = require("path");
 const express = require("express");
 const app = express();
-const port = 5000;
+const port = process.env.port || 5000;
 
 app.use(express.static("public"));
 app.use(express.json());
+
+// write a get request 
+
+app.get(, (req, res) {
+
+})
 
 const data = [
   {
@@ -21,3 +27,8 @@ const data = [
 app.get("/", function (req, res) {
   res.sendFile(path.join(`${__dirname}/views/index.html`));
 });
+
+
+app.listen(port, () => {
+  console.log(`App is listening, http://localhost:${port}`);
+})
