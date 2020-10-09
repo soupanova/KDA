@@ -6,12 +6,12 @@ VALUES($1, $2, $3, $4)
 RETURNING *`;
 
 async function populateTable(newData) {
-  // console.log("we be populating");
-  // console.log(data.length);
+  console.log("we be populating");
+  console.log(newData.ingredients.length);
   for (let i = 0; i < newData.length; i++) {
     let res = await query(text, [
       newData[i].title,
-      newData[i].ingredients,
+      [newData[i].ingredients],
       newData[i].instructions,
       newData[i].image,
     ]);
