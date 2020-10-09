@@ -7,7 +7,8 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "createTable": "node db/createTable.js",
-    "populateTable": "node db/populateTable.js"
+    "populateTable": "node db/populateTable.js",
+    "readTable": "node index.js"
   },
   "keywords": [],
   "author": "Chris Meah <chris@schoolofcode.co.uk>",
